@@ -100,3 +100,4 @@ fabric.properties
 # Go workspace file
 go.work
 
+.idea
