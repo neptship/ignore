@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"log"
 	"os"
 
 	"github.com/spf13/cobra"
@@ -19,19 +20,16 @@ var createCmd = &cobra.Command{
 		if err != nil {
 			if os.IsNotExist(err) {
 			} else {
-				fmt.Println("Error:", err)
-				os.Exit(1)
+				log.Fatal("Error:", err)
 			}
 		} else {
-			fmt.Println("This file already exists")
-			os.Exit(1)
+			log.Fatal("This file already exists")
 		}
 		_, err = os.Create("." + args[0] + "ignore")
 		if err != nil {
-			fmt.Println("An error has occurred")
-			os.Exit(1)
+			log.Fatal("An error has occurred")
 		}
 
-		fmt.Println("The file was created successfully")
+		fmt.Println("." + args[0] + "ignore was created successfully")
 	},
 }
