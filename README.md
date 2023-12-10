@@ -1,7 +1,7 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/neptunsk1y/ignore.svg)](https://pkg.go.dev/github.com/neptunsk1y/ignore)
 [![Go Report Card](https://goreportcard.com/badge/github.com/neptunsk1y/ignore)](https://goreportcard.com/report/github.com/neptunsk1y/ignore)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.froala.com/design-blocks&via=froala&hashtags=bootstrap,design,templates,blocks,developers)
-<h2 align="center">ignore</h2>
+<h1 align="center">ignore</h1>
 
 <h3 align="center">the best cli generator for .ignore<h3><h2>Features</h2>
 - Fast
