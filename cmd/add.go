@@ -12,8 +12,8 @@ func init() {
 }
 
 var createCmd = &cobra.Command{
-	Use:   "add",
-	Short: "add .ignore file",
+	Use:   "create",
+	Short: "create .ignore file",
 	Run: func(cmd *cobra.Command, args []string) {
 		_, err := os.Stat("./." + args[0] + "ignore")
 		if err != nil {
