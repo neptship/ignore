@@ -101,3 +101,4 @@ fabric.properties
 go.work
 
 .idea
+dist/
