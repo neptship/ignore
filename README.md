@@ -4,6 +4,7 @@
 <h1 align="center">ignore</h1>
 
 <h3 align="center">the best cli generator for .ignore<h3><h2>Features</h2>
+  
 - Fast
 - Cross-Platform - Linux, macOS, Windows
 - A large number of templates
