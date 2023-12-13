@@ -21,25 +21,13 @@ var addCommand = &cobra.Command{
 				log.Fatal("Error:", err)
 			}
 		}
-		count := 1
-		if _, err = os.Stat("templates/other/" + args[1] + ".txt"); err != nil {
+		pathTemplateFile := "templates/" + args[1] + ".gitignore"
+		if _, err = os.Stat(pathTemplateFile); err != nil {
 			if os.IsNotExist(err) {
-				if _, err = os.Stat("templates/languages/" + args[1] + ".txt"); err != nil {
-					if os.IsNotExist(err) {
-						log.Fatal("The template does not exist")
-					}
-
-				}
-				count += 1
+				log.Fatal("The template does not exist")
 			} else {
 				log.Fatal("Error:", err)
 			}
-		}
-		var pathTemplateFile string
-		if count == 1 {
-			pathTemplateFile = "templates/other/" + args[1] + ".txt"
-		} else {
-			pathTemplateFile = "templates/languages/" + args[1] + ".txt"
 		}
 		templateFile, err := os.ReadFile(pathTemplateFile)
 		if err != nil {
