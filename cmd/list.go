@@ -3,15 +3,15 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
-	"io/ioutil"
 	"log"
+	"os"
 )
 
 var listCommand = &cobra.Command{
 	Use:   "list",
 	Short: "available templates for .ignore files",
 	Run: func(cmd *cobra.Command, args []string) {
-		files, err := ioutil.ReadDir("templates/")
+		files, err := os.ReadDir("templates/")
 		if err != nil {
 			log.Fatal(err)
 		}
