@@ -35,7 +35,7 @@
 # software binary files
 ### tbd
 
-/*
+/c.gitignore
 !/*.gitignore
 ##
 !*.qpf

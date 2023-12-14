@@ -13,7 +13,7 @@
 /server/default/deploy/*.xml.failed
 /server/default/deploy/*.war.failed
 
-/**
+/c.gitignore
 * For ignore * .war, * .war.failed and * .xml.failed if you use other directories of jboss.
 * Do it similar configuration used for
 * /server/default/deploy

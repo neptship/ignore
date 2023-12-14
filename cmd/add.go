@@ -2,10 +2,9 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/spf13/cobra"
 	"log"
 	"os"
-
-	"github.com/spf13/cobra"
 )
 
 var addCommand = &cobra.Command{
@@ -21,7 +20,11 @@ var addCommand = &cobra.Command{
 				log.Fatal("Error:", err)
 			}
 		}
-		pathTemplateFile := "templates/" + args[1] + ".gitignore"
+		dirname, err := os.UserHomeDir()
+		if err != nil {
+			log.Fatal(err)
+		}
+		pathTemplateFile := dirname + "/go/pkg/mod/github.com/neptunsk1y/ignore@v1.3.2/templates/" + args[1] + ".gitignore"
 		if _, err = os.Stat(pathTemplateFile); err != nil {
 			if os.IsNotExist(err) {
 				log.Fatal("The template does not exist")

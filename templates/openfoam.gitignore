@@ -1,6 +1,6 @@
 # Timestep directories
 0.*
-[1-9]*
+1c.gitignore
 
 # Fields that must get ignored
 */phi*
