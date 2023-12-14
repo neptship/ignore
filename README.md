@@ -10,7 +10,7 @@
     <img alt="goreportcard" src="https://goreportcard.com/badge/github.com/neptunsk1y/ignore"
   /></a>
   <a href="https://github.com/neptunsk1y/radiorecord/actions/workflows/test.yml">
-    <img alt="test workflow" src="https://github.com/neptunsk1y/goradio/actions/workflows/test.yml/badge.svg"
+    <img alt="test workflow" src="https://github.com/neptunsk1y/ignore/actions/workflows/test.yml/badge.svg"
   /></a>
   <a href="https://github.com/neptunsk1y/ignore/blob/main/LICENSE">
     <img alt="license" src="https://img.shields.io/github/license/neptunsk1y/ignore"
@@ -23,7 +23,9 @@
   
 - Fast
 - Cross-Platform - Linux, macOS, Windows
-- A large number of templates
+- Easy installation
+- More than 600 templates for different technologies
+- Friendly error messages in case something goes wrong
 
 <h2>Installation</h2>
 
@@ -62,6 +64,24 @@ go build
 go install
 ```
 
+</details>
+
+<h2>Usage</h2>
+
+![Usage](https://github.com/neptunsk1y/ignore/blob/main/assets/ignore.gif?raw=true)
+
+<h3>Other</h3>
+
+See `ignore help` for more information
+
+<details>
+<summary>Commands</summary>
+
+| Name         | Description                           |
+|--------------|---------------------------------------|
+| create       | create .ignore file                   |
+| add          | add a template to .ignore file        |
+| list         | available templates for .ignore files |
 </details>
 
 <h2> Built With </h2>
