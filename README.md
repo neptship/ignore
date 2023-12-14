@@ -1,9 +1,25 @@
-[![Go Reference](https://pkg.go.dev/badge/github.com/neptunsk1y/ignore.svg)](https://pkg.go.dev/github.com/neptunsk1y/ignore)
-[![Go Report Card](https://goreportcard.com/badge/github.com/neptunsk1y/ignore)](https://goreportcard.com/report/github.com/neptunsk1y/ignore)
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.froala.com/design-blocks&via=froala&hashtags=bootstrap,design,templates,blocks,developers)
-<h1 align="center">ignore</h1>
+<h1 align="center">
+  <img alt="Typst" src="https://github.com/neptunsk1y/ignore/blob/main/assets/ignoregithub.jpg">
+</h1>
 
-<h3 align="center">the best cli generator for .ignore<h3><h2>Features</h2>
+<p align="center">
+  <a href="https://pkg.go.dev/github.com/neptunsk1y/ignore">
+    <img alt="Reference" src="https://pkg.go.dev/badge/github.com/neptunsk1y/ignore.svg"
+  /></a>
+  <a href="https://goreportcard.com/report/github.com/neptunsk1y/ignore">
+    <img alt="goreportcard" src="https://goreportcard.com/badge/github.com/neptunsk1y/ignore"
+  /></a>
+  <a href="https://github.com/neptunsk1y/radiorecord/actions/workflows/test.yml">
+    <img alt="test workflow" src="https://github.com/neptunsk1y/goradio/actions/workflows/test.yml/badge.svg"
+  /></a>
+  <a href="https://github.com/neptunsk1y/ignore/blob/main/LICENSE">
+    <img alt="license" src="https://img.shields.io/github/license/neptunsk1y/ignore"
+  /></a>
+  <a href="https://github.com/neptunsk1y/ignore/releases">
+    <img alt="latest release" src="https://img.shields.io/github/release/neptunsk1y/ignore.svg"
+  /></a>
+</p>
+<h2>Features</h2>
   
 - Fast
 - Cross-Platform - Linux, macOS, Windows
@@ -51,6 +67,10 @@ go install
 <h2> Built With </h2>
 
 * [Cobra](https://cobra.dev/) - The modern CLI framework used
+
+<h2> Contributing </h2>
+
+Please read [CONTRIBUTING.md](https://github.com/neptunsk1y/ignore/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 <h2> Authors </h2>
 
