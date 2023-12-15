@@ -17,10 +17,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - New list templates command
 
-## v1.2.1
-
-- Bug with the display of the radio station has been removed
-
 ## v1.2.0
 
 - Add 600+ templates for *.ignore files

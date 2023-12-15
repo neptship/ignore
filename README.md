@@ -9,7 +9,7 @@
   <a href="https://goreportcard.com/report/github.com/neptunsk1y/ignore">
     <img alt="goreportcard" src="https://goreportcard.com/badge/github.com/neptunsk1y/ignore"
   /></a>
-  <a href="https://github.com/neptunsk1y/radiorecord/actions/workflows/test.yml">
+  <a href="https://github.com/neptunsk1y/ignore/actions/workflows/test.yml">
     <img alt="test workflow" src="https://github.com/neptunsk1y/ignore/actions/workflows/test.yml/badge.svg"
   /></a>
   <a href="https://github.com/neptunsk1y/ignore/blob/main/LICENSE">
@@ -31,7 +31,7 @@
 
 <h3>Golang (Windows, Linux, MacOS)</h3>
 
-Install using [Golang Packages](https://pkg.go.dev/github.com/neptunsk1y/goradio)
+Install using [Golang Packages](https://pkg.go.dev/github.com/neptunsk1y/ignore)
 
 ```shell
 go install github.com/neptunsk1y/ignore@latest
@@ -44,12 +44,12 @@ This script will automatically detect OS & Distro and use the best option availa
 Clone the repo
 ```shell
 git clone https://github.com/neptunsk1y/ignore.git
-cd goradio
+cd ignore
 ```
 
 GNU Make **(Recommended)**
 ```shell
-make setup # if you want to compile and install goradio to path
+make setup # if you want to compile and install ignore cli to path
 ```
 
 <details>
