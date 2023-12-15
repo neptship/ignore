@@ -2,10 +2,11 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/neptunsk1y/ignore/version"
-	"github.com/spf13/cobra"
 	"log"
 	"os"
+
+	"github.com/neptunsk1y/ignore/internal/ignore"
+	"github.com/spf13/cobra"
 )
 
 var addCommand = &cobra.Command{
@@ -21,35 +22,24 @@ var addCommand = &cobra.Command{
 				log.Fatal("Error:", err)
 			}
 		}
-		dirname, err := os.UserHomeDir()
-		if err != nil {
-			log.Fatal(err)
+
+		tr := ignore.NewTemplateRegistry()
+		template := args[1]
+		if !tr.HasTemplate(template) {
+			log.Fatal("template does not exist")
 		}
-		_, err = version.Latest()
-		if err != nil {
-			fmt.Println("Error version check")
-		}
-		pathTemplateFile := dirname + "/go/pkg/mod/github.com/neptunsk1y/ignore@v" + version.Version + "/templates/" + args[1] + ".gitignore"
-		if _, err = os.Stat(pathTemplateFile); err != nil {
-			if os.IsNotExist(err) {
-				log.Fatal("The template does not exist")
-			} else {
-				log.Fatal("Error:", err)
-			}
-		}
-		templateFile, err := os.ReadFile(pathTemplateFile)
-		if err != nil {
-			log.Fatal("Error reading the file")
-		}
+
 		file, err := os.OpenFile(pathFile, os.O_APPEND|os.O_WRONLY, 0666)
 		if err != nil {
 			log.Fatal(err)
 		}
 		defer file.Close()
-		if _, err := file.WriteString("\n" + string(templateFile)); err != nil {
+
+		err = tr.CopyTemplate(template, file)
+		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(args[1] + " template has been added to ." + args[0] + "ignore")
+		fmt.Printf("%s template has been added to .%signore\n", template, args[0])
 	},
 }
 
