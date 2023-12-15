@@ -1,8 +1,11 @@
 package cmd
 
 import (
+	"fmt"
+	"github.com/charmbracelet/log"
 	"github.com/spf13/cobra"
 	"os"
+	"strings"
 )
 
 var rootCmd = &cobra.Command{
@@ -20,4 +23,18 @@ func Execute() {
 
 func init() {
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+}
+
+func handleErr(err error) {
+	if err == nil {
+		return
+	}
+
+	log.Error(err)
+	_, _ = fmt.Fprintf(
+		os.Stderr,
+		"%s\n",
+		strings.Trim(err.Error(), " \n"),
+	)
+	os.Exit(1)
 }
