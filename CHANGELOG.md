@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to
 [Semantic Versioning](https://semver.org).
+## v1.5.0
+
+- Add template registry for handling template files
+- Formatting the code, transferring templates
+
 ## v1.4.0
 
 - Added the version check command
