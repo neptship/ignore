@@ -2,21 +2,19 @@ package cmd
 
 import (
 	"fmt"
+
+	"github.com/neptunsk1y/ignore/internal/ignore"
 	"github.com/spf13/cobra"
-	"log"
-	"os"
 )
 
 var listCommand = &cobra.Command{
 	Use:   "list",
 	Short: "available templates for .ignore files",
 	Run: func(cmd *cobra.Command, args []string) {
-		files, err := os.ReadDir("templates/")
-		if err != nil {
-			log.Fatal(err)
-		}
-		for _, file := range files {
-			fmt.Printf("%s  ", file.Name()[:len(file.Name())-10])
+		tr := ignore.NewTemplateRegistry()
+		templates := tr.List()
+		for _, template := range templates {
+			fmt.Printf("%s  ", template)
 		}
 	},
 }
