@@ -2,11 +2,10 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/neptunsk1y/ignore/internal"
+	"github.com/spf13/cobra"
 	"log"
 	"os"
-
-	"github.com/neptunsk1y/ignore/internal/ignore"
-	"github.com/spf13/cobra"
 )
 
 var addCommand = &cobra.Command{
@@ -23,7 +22,7 @@ var addCommand = &cobra.Command{
 			}
 		}
 
-		tr := ignore.NewTemplateRegistry()
+		tr := internal.NewTemplateRegistry()
 		template := args[1]
 		if !tr.HasTemplate(template) {
 			log.Fatal("template does not exist")

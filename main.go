@@ -1,10 +1,9 @@
 package main
 
 import (
-	"os"
-
 	"github.com/charmbracelet/log"
 	"github.com/neptunsk1y/ignore/cmd"
+	"os"
 )
 
 func handlePanic() {

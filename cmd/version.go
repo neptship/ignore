@@ -2,13 +2,11 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/charmbracelet/lipgloss"
 	"github.com/neptunsk1y/ignore/version"
+	"github.com/spf13/cobra"
 	"html/template"
 	"runtime"
-
-	"github.com/charmbracelet/lipgloss"
-
-	"github.com/spf13/cobra"
 )
 
 func init() {
