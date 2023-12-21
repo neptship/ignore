@@ -15,7 +15,7 @@ func init() {
 
 var versionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "print the version number of the ignore",
+	Short: "Print the version number of the ignore",
 	Run: func(cmd *cobra.Command, args []string) {
 		_, err := version.Latest()
 		if err != nil {

@@ -9,8 +9,8 @@ import (
 )
 
 var addCommand = &cobra.Command{
-	Use:   "add",
-	Short: "add a template to .ignore file",
+	Use:   "add [filename] [template]",
+	Short: "Add a template to .ignore file",
 	Run: func(cmd *cobra.Command, args []string) {
 		pathFile := "./." + args[0] + "ignore"
 		_, err := os.Stat(pathFile)

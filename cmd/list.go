@@ -8,7 +8,7 @@ import (
 
 var listCommand = &cobra.Command{
 	Use:   "list",
-	Short: "available templates for .ignore files",
+	Short: "Available templates for .ignore files",
 	Run: func(cmd *cobra.Command, args []string) {
 		tr := internal.NewTemplateRegistry()
 		templates := tr.List()

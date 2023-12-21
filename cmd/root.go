@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/charmbracelet/log"
+	cc "github.com/ivanpirog/coloredcobra"
 	"github.com/spf13/cobra"
 	"os"
 	"strings"
@@ -15,6 +16,17 @@ var rootCmd = &cobra.Command{
 }
 
 func Execute() {
+	cc.Init(&cc.Config{
+		RootCmd:         rootCmd,
+		Headings:        cc.HiBlue + cc.Bold + cc.Underline,
+		Commands:        cc.HiYellow + cc.Bold,
+		Example:         cc.Italic,
+		ExecName:        cc.Bold,
+		Flags:           cc.Bold,
+		FlagsDataType:   cc.Italic + cc.HiBlue,
+		NoExtraNewlines: true,
+		NoBottomNewline: true,
+	})
 	err := rootCmd.Execute()
 	if err != nil {
 		os.Exit(1)
