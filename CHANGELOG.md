@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to
 [Semantic Versioning](https://semver.org).
+
+## v1.6.1
+
+- chore: migration from `neptunsk1y` to `neptship`
+
+## v1.6.0
+
+- Add detailed descriptions of the commands
+- Colorized tui
+
 ## v1.5.0
 
 - Add template registry for handling template files
