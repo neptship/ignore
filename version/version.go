@@ -13,7 +13,7 @@ func Latest() (version string, err error) {
 		return "", err
 	}
 
-	resp, err := http.Get("https://api.github.com/repos/neptunsk1y/ignore/releases/latest")
+	resp, err := http.Get("https://api.github.com/repos/neptship/ignore/releases/latest")
 	if err != nil {
 		return
 	}

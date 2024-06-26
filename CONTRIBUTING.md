@@ -3,7 +3,7 @@
 Contributions are welcome! Please feel free to open issues or pull requests.
 
 ### Steps
-> 01) First, fork the [repo from my account](github.com/neptunsk1y/ignore)
+> 01) First, fork the [repo from my account](github.com/neptship/ignore)
 - Learn how to fork a github repo from [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
 

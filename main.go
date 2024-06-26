@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/charmbracelet/log"
-	"github.com/neptunsk1y/ignore/cmd"
+	"github.com/neptship/ignore/cmd"
 	"os"
 )
 
