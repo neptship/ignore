@@ -2,11 +2,12 @@ package cmd
 
 import (
 	"fmt"
+	"os"
+	"strings"
+
 	"github.com/charmbracelet/log"
 	cc "github.com/ivanpirog/coloredcobra"
 	"github.com/spf13/cobra"
-	"os"
-	"strings"
 )
 
 var rootCmd = &cobra.Command{

@@ -2,10 +2,11 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/neptship/ignore/internal"
-	"github.com/spf13/cobra"
 	"log"
 	"os"
+
+	"github.com/neptship/ignore/internal"
+	"github.com/spf13/cobra"
 )
 
 var addCommand = &cobra.Command{

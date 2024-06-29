@@ -20,7 +20,7 @@
   /></a>
 </p>
 <h2>Features</h2>
-  
+
 - Fast
 - Cross-Platform - Linux, macOS, Windows
 - Easy installation

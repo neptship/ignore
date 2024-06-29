@@ -2,11 +2,12 @@ package cmd
 
 import (
 	"fmt"
+	"html/template"
+	"runtime"
+
 	"github.com/charmbracelet/lipgloss"
 	"github.com/neptship/ignore/version"
 	"github.com/spf13/cobra"
-	"html/template"
-	"runtime"
 )
 
 func init() {
@@ -40,7 +41,7 @@ var versionCmd = &cobra.Command{
 			"faint":   lipgloss.NewStyle().Faint(true).Render,
 			"bold":    lipgloss.NewStyle().Bold(true).Render,
 			"magenta": lipgloss.NewStyle().Foreground(lipgloss.Color("#5a6368")).Render,
-		}).Parse(`{{ magenta "▇▇▇" }} {{ magenta .App }} 
+		}).Parse(`{{ magenta "▇▇▇" }} {{ magenta .App }}
 
   {{ faint "Version" }}  {{ bold .Version }}
   {{ faint "Platform" }} {{ bold .OS }}/{{ bold .Arch }}

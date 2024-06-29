@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+
 	"github.com/neptship/ignore/internal"
 	"github.com/spf13/cobra"
 )
