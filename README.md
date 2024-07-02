@@ -45,44 +45,15 @@ Clone the repo
 ```shell
 git clone https://github.com/neptship/ignore.git
 cd ignore
-```
-
-GNU Make **(Recommended)**
-```shell
-make setup # if you want to compile and install ignore cli to path
-```
-
-<details>
-<summary>If you don't have GNU Make use this</summary>
-
-
-```shell
-# To build
 go build
-
-# To install
 go install
 ```
 
-</details>
-
 <h2>Usage</h2>
 
+Just run `ignore` and you're ready to go.
+
 ![Usage](https://github.com/neptship/ignore/blob/main/assets/ignore.gif?raw=true)
-
-<h3>Other</h3>
-
-See `ignore help` for more information
-
-<details>
-<summary>Commands</summary>
-
-| Name         | Description                           |
-|--------------|---------------------------------------|
-| create       | create .ignore file                   |
-| add          | add a template to .ignore file        |
-| list         | available templates for .ignore files |
-</details>
 
 <h2> Built With </h2>
 
