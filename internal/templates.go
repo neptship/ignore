@@ -10,6 +10,8 @@ import (
 	"strings"
 )
 
+var IgnoreFiles = []string{".gitignore", ".bzrignore", ".chefignore", ".cfignore", ".cvsignore", ".boringignore", ".deployignore", ".dockerignore", ".ebignore", ".eleventyignore", ".eslintignore", ".flooignore", ".gcloudignore", ".helmignore", ".jpmignore", ".jshintignore", ".hgignore", ".mtn-ignore", ".nodemonignore", ".npmignore", ".nuxtignore", ".openapi-generator-ignore", ".p4ignore", ".prettierignore", ".stylelintignore", ".stylintignore", ".swagger-codegen-ignore", ".terraformignore", ".tfignore", ".tokeignore", ".upignore", ".vercelignore", ".yarnignore"}
+
 //go:embed templates/*
 var templates embed.FS
 
