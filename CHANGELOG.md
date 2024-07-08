@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to
 [Semantic Versioning](https://semver.org).
 
-## v2.0.0
+## v1.7.0
 
 - A new interface using PromptUI
 - Simplifying the cli
 - Сhanging the structure
+- Fixing bugs
 
 ## v1.6.1
 

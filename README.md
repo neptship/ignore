@@ -59,10 +59,6 @@ Just run `ignore` and you're ready to go.
 
 * [Cobra](https://cobra.dev/) - The modern CLI framework used
 
-<h2> Contributing </h2>
-
-Please read [CONTRIBUTING.md](https://github.com/neptship/ignore/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
 <h2> Authors </h2>
 
 * **Mikhail Chikankov** - *Creator project* - [neptship](https://github.com/neptship)
