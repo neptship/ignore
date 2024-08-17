@@ -69,7 +69,7 @@ Just run `ignore` and you're ready to go.
 Sample and its code provided under MIT license, please see [LICENSE](/LICENSE). All third-party source code provided
 under their own respective and MIT-compatible Open Source licenses.
 
-Copyright (C) 2023, Mikhail Chikankov
+Copyright (C) 2023, neptship
 
 
 <h2> Acknowledgments </h2>
