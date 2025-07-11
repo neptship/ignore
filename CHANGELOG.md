@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to
 [Semantic Versioning](https://semver.org).
 
+## v2.0.0
+
+- Replace PromptUI with modern BubbleTea terminal interface
+- Add interactive preview functionality for templates  
+- Implement search functionality across ignore files and templates
+- Add template caching and performance optimizations
+- Update GoReleaser configuration to v2
+- Enhance user experience with styled output using Lipgloss
+- Streamline CLI workflow and remove legacy dependencies
+
 ## v1.7.0
 
 - A new interface using PromptUI
