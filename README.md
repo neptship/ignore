@@ -18,46 +18,54 @@
   <a href="https://github.com/neptship/ignore/releases">
     <img alt="latest release" src="https://img.shields.io/github/release/neptship/ignore.svg"
   /></a>
+  <a href="https://github.com/neptship/ignore/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/neptship/ignore?style=social"
+  /></a>
 </p>
-<h2>Features</h2>
 
-- Fast
-- Cross-Platform - Linux, macOS, Windows
-- Easy installation
-- More than 600 templates for different technologies
-- Friendly error messages in case something goes wrong
+## Why ignore?
+
+- **Lightning fast** - Generate .gitignore in seconds
+- **600+ templates** - Support for all major languages and frameworks
+- **Interactive search** - Find templates with fuzzy search
+- **Cross-platform** - Works on Linux, macOS, and Windows
+- **Beautiful TUI** - Clean and intuitive interface
 
 <h2>Installation</h2>
 
-<h3>Golang (Windows, Linux, MacOS)</h3>
-
-Install using [Golang Packages](https://pkg.go.dev/github.com/neptship/ignore)
-
-```shell
+**Go install:**
+```bash
 go install github.com/neptship/ignore@latest
 ```
 
-This script will automatically detect OS & Distro and use the best option available.
-
-<h3> From source </h3>
-
-Clone the repo
-```shell
+**From source:**
+```bash
 git clone https://github.com/neptship/ignore.git
 cd ignore
 go build
-go install
 ```
 
 <h2>Usage</h2>
 
-Just run `ignore` and you're ready to go.
+Just run `ignore` and you're ready to go:
+
+```bash
+ignore
+```
 
 ![Usage](https://github.com/neptship/ignore/blob/main/assets/ignore.gif?raw=true)
+
+## Features
+
+- **Fuzzy search** - Type to filter templates instantly
+- **Preview mode** - See template contents before applying
+- **Multiple formats** - Supports .gitignore, .dockerignore, .npmignore and more
+- **Safe merging** - Appends to existing files without overwriting
 
 <h2> Built With </h2>
 
 * [Cobra](https://cobra.dev/) - The modern CLI framework used
+* [Bubble Tea](https://github.com/charmbracelet/bubbletea) - The TUI framework for terminal applications
 
 <h2> Authors </h2>
 
@@ -72,11 +80,15 @@ under their own respective and MIT-compatible Open Source licenses.
 Copyright (C) 2023, neptship
 
 
-<h2> Acknowledgments </h2>
+---
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+<div align="center">
+
+**⭐ If this tool saved you time, please consider giving it a star! ⭐**
+
+Made with ❤️ by [neptship](https://github.com/neptship)
+
+</div>
 
 [![Stargazers repo roster for @neptship/ignore](https://reporoster.com/stars/neptship/ignore)](https://github.com/neptship/ignore/stargazers)
 
