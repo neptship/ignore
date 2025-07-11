@@ -16,11 +16,19 @@ var IgnoreFiles = []string{".gitignore", ".bzrignore", ".chefignore", ".cfignore
 var templates embed.FS
 
 type TemplateRegistry struct {
-	templates fs.FS
+	templates      fs.FS
+	templatesList  []string
+	templatesCache map[string]string
+	maxCacheSize   int
+	cacheKeys      []string
 }
 
 func NewTemplateRegistry() *TemplateRegistry {
-	return &TemplateRegistry{templates: templates}
+	return &TemplateRegistry{
+		templates:      templates,
+		templatesCache: make(map[string]string),
+		maxCacheSize:   100,
+	}
 }
 
 func (tr *TemplateRegistry) HasTemplate(name string) bool {
@@ -29,16 +37,20 @@ func (tr *TemplateRegistry) HasTemplate(name string) bool {
 }
 
 func (tr *TemplateRegistry) List() []string {
-	var templates []string
+	if tr.templatesList != nil {
+		return tr.templatesList
+	}
+
+	tr.templatesList = make([]string, 0, 600)
 	fs.WalkDir(tr.templates, ".", func(path string, d fs.DirEntry, _ error) error {
 		if d.IsDir() {
 			return nil
 		}
 		template := strings.TrimSuffix(filepath.Base(path), ".gitignore")
-		templates = append(templates, template)
+		tr.templatesList = append(tr.templatesList, template)
 		return nil
 	})
-	return templates
+	return tr.templatesList
 }
 
 func (tr *TemplateRegistry) CopyTemplate(name string, dst io.Writer) error {
@@ -48,4 +60,28 @@ func (tr *TemplateRegistry) CopyTemplate(name string, dst io.Writer) error {
 	}
 	io.Copy(dst, bytes.NewReader(b))
 	return nil
+}
+
+func (tr *TemplateRegistry) GetTemplateContent(name string) (string, error) {
+	if content, exists := tr.templatesCache[name]; exists {
+		return content, nil
+	}
+
+	b, err := fs.ReadFile(tr.templates, fmt.Sprintf("templates/%s.gitignore", name))
+	if err != nil {
+		return "", err
+	}
+
+	content := string(b)
+	tr.templatesCache[name] = content
+
+	if len(tr.templatesCache) > tr.maxCacheSize {
+		oldestKey := tr.cacheKeys[0]
+		tr.cacheKeys = tr.cacheKeys[1:]
+		delete(tr.templatesCache, oldestKey)
+	}
+
+	tr.cacheKeys = append(tr.cacheKeys, name)
+
+	return content, nil
 }

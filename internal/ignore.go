@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"log"
 	"os"
+
+	"github.com/charmbracelet/lipgloss"
 )
 
 func AddIgnoreTemplate(fileName string, templateName string) {
-	colorGreen := "\033[32m"
-	colorReset := "\033[0m"
 	pathFile := "./" + fileName
 	_, err := os.Stat(pathFile)
 	if err != nil {
@@ -37,7 +37,20 @@ func AddIgnoreTemplate(fileName string, templateName string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(string(colorGreen))
-	fmt.Print("√  ", string(colorReset))
-	fmt.Println(fileName + " created successfully")
+
+	successStyle := lipgloss.NewStyle().
+		Bold(true).
+		Foreground(lipgloss.Color("#00D26A")).
+		MarginTop(1).
+		MarginBottom(1)
+
+	checkMark := lipgloss.NewStyle().
+		Bold(true).
+		Foreground(lipgloss.Color("#00D26A"))
+
+	fmt.Println(successStyle.Render("🎉 Success!"))
+	fmt.Printf("%s %s created successfully with %s template\n",
+		checkMark.Render("✓"),
+		fileName,
+		templateName)
 }
